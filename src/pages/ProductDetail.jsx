@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { BiSolidStar } from "react-icons/bi";
-import getProducts from "./utils.js";
+import getProducts from "../utils/getProducts.js";
 
 const ProductDetail = ({product}) => {
 

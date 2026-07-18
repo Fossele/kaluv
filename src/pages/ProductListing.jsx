@@ -1,4 +1,4 @@
-import getProducts from "./utils.js";
+import getProducts from "../utils/getProducts.js";
 import ProductCard from "../components/ProductCard.jsx";
 import { useEffect, useState } from "react";
 

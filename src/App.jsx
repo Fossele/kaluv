@@ -7,6 +7,7 @@ import ProductListing from "./pages/ProductListing.jsx";
 
 import { Routes, Route } from "react-router-dom";
 import Cart from "./pages/Cart.jsx";
+import { Toaster } from "react-hot-toast";
 
 
 const Test = () => {
@@ -23,7 +24,8 @@ const Test = () => {
 export default function App() {
   return (
     <>
-       <NavBar/>
+    <Toaster position="top-right"/>
+      <NavBar />
       <Cart />
     </>
 

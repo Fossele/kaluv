@@ -1,4 +1,5 @@
 import { BiSearch, BiDownArrow, BiLockOpenAlt, BiHeart, BiCart } from "react-icons/bi"
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
 
@@ -17,3 +18,11 @@ const NavBar = () => {
 }
 
 export default NavBar;
+
+/*<div className="flex w-1/3 justify-around items-center">
+                <span><BiSearch /></span>
+                <span className="flex items-center gap-1">Category<BiDownArrow /></span>
+                <Link to="/sign-in"><span className="flex items-center gap-1 text-center">Sign in <BiLockOpenAlt /></span></Link>
+                <Link to="/fav"> <span className="flex items-center-safe gap-1"><BiHeart />favourites</span></Link>
+                <Link to="/cart">  <span className="flex items-center-safe gap-1"><BiCart />Cart</span></Link>
+            </div>*/
