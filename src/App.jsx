@@ -5,6 +5,10 @@ import ProductDetail from "./pages/ProductDetail.jsx";
 import ProductListing from "./pages/ProductListing.jsx";
 
 
+import { Routes, Route } from "react-router-dom";
+import Cart from "./pages/Cart.jsx";
+
+
 const Test = () => {
 
   return (
@@ -18,11 +22,18 @@ const Test = () => {
 }
 export default function App() {
   return (
+    <>
+       <NavBar/>
+      <Cart />
+    </>
 
-    <div >
-      <NavBar></NavBar>
-      <ProductDetail></ProductDetail>
-    </div>
-
-  )
+  );
 }
+
+{/*  <Routes>
+      <Route path="/login" element={<Login />} ></Route>
+      <Route path="/home" element={<ProductListing />}></Route>
+      <Route path="product/detail:id" element={<ProductDetail />} ></Route>
+      <Route path="/signup" element={<Signup />}></Route>
+
+   </Routes> */}

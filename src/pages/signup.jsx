@@ -13,7 +13,7 @@ const Signup = () => {
                     name="username"
                     placeholder="Enter your full name."
                     required
-                    autocomplete="username"
+                    autoComplete="username"
                     className="p-3 border-2 rounded-xl focus:border-red-500  focus:outline-0"
                 />
             </div>
@@ -28,7 +28,7 @@ const Signup = () => {
                     name="email"
                     placeholder="algra.mentor@gmail.com"
                     required
-                    autocomplete="email"
+                    autoComplete="email"
                     className="p-3 border-2 rounded-xl focus:border-red-500  focus:outline-0"
                 />
             </div>
@@ -44,15 +44,15 @@ const Signup = () => {
                     name="password"
                     placeholder="Enter your password"
                     required
-                    autocomplete="current-password"
+                    autoComplete="current-password"
                     className="p-3 border-2 rounded-xl focus:border-red-500  focus:outline-0"
                 />
             </div>
 
-            <button type="submit" class="w-full p-2 rounded-xl text-white bg-red-700">Sign Up</button>
+            <button type="submit" className="w-full p-2 rounded-xl text-white bg-red-700">Sign Up</button>
 
 
-            <p class="underline hover:text-red-700">
+            <p className="underline hover:text-red-700">
                 Already have an account? <a href="/signup">Sign in here</a>
             </p>
             

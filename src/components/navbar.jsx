@@ -7,10 +7,10 @@ const NavBar = () => {
             <p>KALUV</p> {/*Brand logo expected here */}
             <div className="flex w-1/3 justify-around items-center">
                 <span><BiSearch /></span>
-                <span className="flex items-center">Category<BiDownArrow /></span>
-                <span className="flex items-center-safe"> sign in <BiLockOpenAlt /></span>
-                <span><BiHeart /></span>
-                <span><BiCart /></span>
+                <span className="flex items-center gap-1">Category<BiDownArrow /></span>
+                <span className="flex items-center gap-1 text-center">Sign in <BiLockOpenAlt /></span>
+                <span className="flex items-center-safe gap-1"><BiHeart />favourites</span>
+                <span className="flex items-center-safe gap-1"><BiCart />Cart</span>
             </div>
         </nav>
     )
