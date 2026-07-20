@@ -3,7 +3,7 @@ import Signup from "./pages/signup.jsx";
 import NavBar from "./components/navbar.jsx";
 import ProductDetail from "./pages/ProductDetail.jsx";
 import ProductListing from "./pages/ProductListing.jsx";
-import UserContext from "./utils/userContext.js";
+
 
 import { Routes, Route } from "react-router-dom";
 import Cart from "./pages/Cart.jsx";
@@ -20,16 +20,17 @@ const Test = () => {
   )
 }
 export default function App() {
+    
+const [cardProducts, setCartProducts] = useState([]);
+
   return (
-    <div>
-      <UserContext.Provider value={product}>
+    <div>    
         <Toaster position="top-right" />
         <NavBar />
         <Routes>
-          <Route path="/products/*" element={<Products />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </UserContext.Provider>
+          <Route path="/products/*" element={<Products setCartProducts={setCartProducts}/>} />
+          <Route path="/cart" element={<Cart cardProducts={cardProducts}/>} />
+        </Routes>   
     </div>
 
   );

@@ -24,7 +24,7 @@ const contextValue = {chosenProduct, getProductDetail};
         <ProductContext.Provider value = {contextValue}>
             <Routes>
                 <Route path="/" element={<ProductListings />} />
-                <Route path="/:id" element={<ProductDetail />} />
+                <Route path="/:id" element={<ProductDetail setCartProducts={setCartProducts}/>} />
             </Routes>
         </ProductContext.Provider>
     );

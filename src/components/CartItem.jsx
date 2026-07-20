@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CartItem = () => {
+const CartItem = ({product}) => {
 
     const [count, setCount] = useState(0);
 

@@ -1,17 +1,35 @@
 import toast from "react-hot-toast";
 import CartItem from "../components/CartItem";
+import { useState } from "react";
 
 
 const doSubmit = async() => {
     toast.success('Sign Up Successful. You are now logged in');
 };
 
-const Cart = () => {
+const Cart = ({cardProducts}) => {
 
     return (
         <div className="flex flex-col gap-4  w-10/12 p-4 m-auto ">
+            { cardProducts.map((product) => (<CardItem product= {product}/>))}
 
-            {/*
+            <CartItem />
+            <CartItem />
+            <CartItem />
+
+            <div className=" flex justify-end gap-2  w-full">
+                <button className="bg-indigo-700 text-white p-3 rounded-2xl">Go back to products</button>
+                <button className=" border-indigo-700 border p-3 rounded-2xl" onClick={() => doSubmit()}>Go to checkout</button>
+            </div>
+
+        </div>
+    )
+}
+
+export default Cart;
+
+
+/*
             <div>
 
 
@@ -110,19 +128,4 @@ const Cart = () => {
                     </div>
 
                 </div>
-            </div> */}
-
-            <CartItem />
-            <CartItem />
-            <CartItem />
-
-            <div className=" flex justify-end gap-2  w-full">
-                <button className="bg-indigo-700 text-white p-3 rounded-2xl">Go back to product</button>
-                <button className=" border-indigo-700 border p-3 rounded-2xl" onClick={() => doSubmit()}>Go to checkout</button>
-            </div>
-
-        </div>
-    )
-}
-
-export default Cart;
+            </div> */

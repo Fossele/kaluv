@@ -5,10 +5,10 @@ import { useParams } from "react-router-dom";
 import ProductContext from "../utils/productContext.js";
 
 
-const ProductDetail = () => {
+const ProductDetail = ({setCartProducts}) => {
 
-    const {product, _ } = useContext(ProductContext);
-
+    const { product, _ } = useContext(ProductContext);
+    
     return (
         <div className="flex justify-between gap-5 w-10/12 h-lvh m-auto bg-black">
             <div className="w-1/2 h-6/12 bg-blue-600"><img src={product.image} alt="sorry" /></div>
@@ -33,7 +33,7 @@ const ProductDetail = () => {
             <p> {product.availability}</p>
 
             <div>
-                <button>Add to cart</button>
+                <button onClick={()=>{setCartProducts(...product)}}>Add to cart</button>
                 <button>checkout now</button>
             </div>
         </div>
