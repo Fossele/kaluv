@@ -2,8 +2,13 @@ import { useNavigate } from "react-router-dom";
 
 import { BiSolidArrowToRight, BiStar } from "react-icons/bi";
 import { BiArrowToLeft } from "react-icons/bi";
+import { useContext } from "react";
+import ProductContext from "../utils/productContext";
 
-const ProductCard = ({ name, image, price, discountPercentage = 0, rating, id }) => {
+const { chosenProduct, getProductDetail } = useContext(ProductContext);
+
+
+const ProductCard = ({ name, image, price, discountPercentage = 0, rating, id, product }) => {
 
     const navigate = useNavigate();
     return (
@@ -21,7 +26,7 @@ const ProductCard = ({ name, image, price, discountPercentage = 0, rating, id })
                 }
                 <p className="flex items-center"> <BiStar /> {rating} </p>
             </div>
-            <button className="flex items-center bg-indigo-700" onClick={()=> {navigate(`product/${id}`)}}><p>Get detail</p> <BiSolidArrowToRight/> </button>
+            <button className="flex items-center bg-indigo-700" onClick={()=> {navigate(`product/${id}`); getProductDetail(product);}}><p>Get detail</p> <BiSolidArrowToRight/> </button>
         </div>
     );
 }

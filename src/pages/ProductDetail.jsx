@@ -1,10 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { BiSolidStar } from "react-icons/bi";
 import getProducts from "../utils/getProducts.js";
 import { useParams } from "react-router-dom";
+import ProductContext from "../utils/productContext.js";
 
-const ProductDetail = ({product}) => {
- 
+
+const ProductDetail = () => {
+
+    const {product, _ } = useContext(ProductContext);
+
     return (
         <div className="flex justify-between gap-5 w-10/12 h-lvh m-auto bg-black">
             <div className="w-1/2 h-6/12 bg-blue-600"><img src={product.image} alt="sorry" /></div>
@@ -19,7 +23,7 @@ const ProductDetail = ({product}) => {
                         <span>{product.price}$</span>
                     </div>
                     }
-                    <p className="flex items-center"> <BiStar /> {rating} </p>
+                    <p className="flex items-center"> <BiStar /> {product.rating} </p>
                 </div>
 
             </div>
