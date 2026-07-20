@@ -10,7 +10,7 @@ const CartItem = () => {
         <div className="flex justify-around items-center gap-4 border-fuchsia-900 border rounded-2xl">
             <div className="flex justify-between gap-3">
                 <div>
-                    <img src="https://placeholder.com" alt="Bag" className="w-10 h-10" />
+                    <img src="https://placeholder.com" alt="Bag" className="w-10 h-10 bg-indigo-100" />
                     <button>✕</button>
                 </div>
                 <div className="flex flex-col">

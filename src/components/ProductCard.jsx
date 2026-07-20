@@ -1,9 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 import { BiSolidArrowToRight, BiStar } from "react-icons/bi";
 import { BiArrowToLeft } from "react-icons/bi";
 
-const ProductCard = ({ name, image, price, discountPercentage = 0, rating }) => {
+const ProductCard = ({ name, image, price, discountPercentage = 0, rating, id }) => {
+
+    const navigate = useNavigate();
     return (
-        <div className=" border-indigo-700 border transition duration-500 hover:shadow-[0_0_25px_rgba(0,0,0,0.08)] p-2.5">
+        <div className=" border-indigo-700 bg-indigo-100 border transition duration-500 hover:shadow-[0_0_25px_rgba(0,0,0,0.08)] p-2.5">
             <img src={image} alt={name} />
             <p>{name}</p>
 
@@ -17,7 +21,7 @@ const ProductCard = ({ name, image, price, discountPercentage = 0, rating }) => 
                 }
                 <p className="flex items-center"> <BiStar /> {rating} </p>
             </div>
-            <button className="flex items-center bg-indigo-700"><p>Get detail</p> <BiSolidArrowToRight/> </button>
+            <button className="flex items-center bg-indigo-700" onClick={()=> {navigate(`product/${id}`)}}><p>Get detail</p> <BiSolidArrowToRight/> </button>
         </div>
     );
 }

@@ -14,20 +14,21 @@ const Test = () => {
 
   return (
     <div className="min-w-40 min-h-40 text-center text-amber-200
-     bg-purple-500 transition ease-linear delay-100 duration-[5s] hover:text-blue-700 hover:box-shadow-lg
-      
-     ">
+  bg-purple-500 transition ease-linear delay-100 duration-[5s] hover:text-blue-700 hover:box-shadow-lg">
       color change
     </div>
   )
 }
 export default function App() {
   return (
-    <>
-    <Toaster position="top-right"/>
+    <div>
+      <Toaster position="top-right" />
       <NavBar />
-      <Cart />
-    </>
+      <Routes>
+        <Route path="/products/*" element={<Products />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </div>
 
   );
 }

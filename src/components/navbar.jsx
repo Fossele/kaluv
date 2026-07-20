@@ -1,5 +1,5 @@
 import { BiSearch, BiDownArrow, BiLockOpenAlt, BiHeart, BiCart } from "react-icons/bi"
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
 
@@ -8,10 +8,10 @@ const NavBar = () => {
             <p>KALUV</p> {/*Brand logo expected here */}
             <div className="flex w-1/3 justify-around items-center">
                 <span><BiSearch /></span>
-                <span className="flex items-center gap-1">Category<BiDownArrow /></span>
-                <span className="flex items-center gap-1 text-center">Sign in <BiLockOpenAlt /></span>
-                <span className="flex items-center-safe gap-1"><BiHeart />favourites</span>
-                <span className="flex items-center-safe gap-1"><BiCart />Cart</span>
+                <span className="flex items-center gap-1" activeClassName="border-b">Category<BiDownArrow /></span>
+                <NavLink to="/sign-in" className="flex items-center gap-1 text-center">Sign in <BiLockOpenAlt /></NavLink>
+                <NavLink to = "/products/favorite" className="flex items-center-safe gap-1"><BiHeart />favorites</NavLink>
+                <NavLink  to ="/cart" className="flex items-center-safe gap-1"><BiCart />Cart</NavLink>
             </div>
         </nav>
     )

@@ -3,7 +3,7 @@ import ProductCard from "../components/ProductCard.jsx";
 import { useEffect, useState } from "react";
 
 
-const ProductListing = () => {
+const ProductListings = () => {
 
     const [products, setProducts] = useState([]);
     //const [loading, setLoading] = useState(true);
@@ -12,7 +12,7 @@ const ProductListing = () => {
         getProducts()
             .then((data) => {
                 // 2. data here is exactly your array of products. Pass it directly.
-                setProducts([... data ]);
+                setProducts([...data]);
                 console.log("1. Inside .then() -> Data successfully arrived:", data);
             })
             .catch((err) => {
@@ -24,6 +24,9 @@ const ProductListing = () => {
         console.log("2. Inside useEffect body -> State is not updated yet:", products);
     }, []);
 
+    const { id } = useParams();
+
+
     return (
         <div className="grid grid-cols-4 grid-flow-row gap-4 w-10/12 h-fit m-auto p-4">
 
@@ -32,9 +35,11 @@ const ProductListing = () => {
                 image={product.thumbnail}
                 price={product.price}
                 discountPercentage={product.discountPercentage}
-                rating={product.rating} />))}
+                rating={product.rating}
+                id = {product.id}
+                />))}
         </div>
     );
 }
 
-export default ProductListing;
+export default ProductListings;
