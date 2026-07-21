@@ -26,10 +26,12 @@ export default function App() {
 const [cardProducts, setCartProducts] = useState([]);
 
   return (
-    <div>    
+    <div className="h-lvh">    
         <Toaster position="top-right" />
         <NavBar />
         <Routes>
+          <Route path="/sign-in" element = {<Login/>} />
+          <Route path="/sign-up" element = {<Signup/>} />
           <Route path="/products/*" element={<Products setCartProducts={setCartProducts}/>} />
           <Route path="/cart" element={<Cart cardProducts={cardProducts}/>} />
         </Routes>   

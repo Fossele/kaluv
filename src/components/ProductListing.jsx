@@ -9,7 +9,7 @@ const ProductListings = () => {
 
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-   
+
     useEffect(() => {
         getProducts()
             .then((data) => {
@@ -27,7 +27,7 @@ const ProductListings = () => {
 
             {loading ? <div>
                 <BiLoaderCircle />
-                    </div>
+            </div>
                 : products.map((product) => (<ProductCard key={product.id}
                     name={product.title}
                     image={product.thumbnail}

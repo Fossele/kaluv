@@ -12,7 +12,7 @@ const ProductDetail = ({setCartProducts}) => {
     
     return (
         <div className="flex justify-between gap-5 w-10/12 h-lvh m-auto bg-black">
-            <div className="w-1/2 h-6/12 bg-blue-600"><img src={product.image} alt="sorry" /></div>
+            <div className="w-1/2 h-6/12 bg-gray-200"><img src={product.image} alt="sorry" /></div>
             <div className="w-1/2 h-6/12 bg-white">
                 <p>{product.brand}</p>
                 <h1>{product.title}</h1>
@@ -34,8 +34,8 @@ const ProductDetail = ({setCartProducts}) => {
             <p> {product.availability}</p>
 
             <div>
-                <button onClick={()=>{setCartProducts(...product)}}>Add to cart</button>
-                <button>checkout now</button>
+                <button onClick={()=>{setCartProducts(...product)}} className="bg-indigo-700 text-white p-3 rounded-2xl" >Add to cart</button>
+                <button  className="border-indigo-700 border p-3 rounded-2xl">checkout now</button>
             </div>
         </div>
     )
