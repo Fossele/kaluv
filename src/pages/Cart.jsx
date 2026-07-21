@@ -1,6 +1,7 @@
 import toast from "react-hot-toast";
 import CartItem from "../components/CartItem.jsx";
 import { BiCartAdd } from "react-icons/bi";
+import { FaHouseFloodWaterCircleArrowRight } from "react-icons/fa6";
 
 
 
@@ -16,12 +17,10 @@ const Cart = ({ cardProducts }) => {
                 <div><BiCartAdd /><p>Your cart is empty</p></div> :
                 cardProducts.map((product) => (<CartItem product={product} />))
             }
-        
             <div className=" flex justify-end gap-2  w-full">
                 <button className="bg-indigo-700 text-white p-3 rounded-2xl">Go back to products</button>
                 <button className=" border-indigo-700 border p-3 rounded-2xl" onClick={() => doSubmit()}>Go to checkout</button>
             </div>
-
         </div>
     )
 }

@@ -1,6 +1,6 @@
 const Signup = () => {
     return (
-        <form action="/sign-up" method="POST" className="flex flex-col w-full max-w-sm p-4 rounded-2xl gap-4 border-gray-100 shadow-[0_0_25px_rgba(0,0,0,0.08)]">
+        <form action="/sign-up" method="POST" className="flex flex-col w-full max-w-2xl h mx-auto p-4 mt-20 rounded-2xl gap-4 border-gray-100 shadow-2xl">
             <h2 className="font-bold text-2xl">Create an account.</h2>
             <h3>Please, enter your details.</h3>
             <div className="flex flex-col">
@@ -13,8 +13,8 @@ const Signup = () => {
                     name="username"
                     placeholder="Enter your full name."
                     required
-                    autoComplete="username"
-                    className="p-3 border-2 rounded-xl focus:border-red-500  focus:outline-0"
+                    autoComplete="name"
+                    className="p-3 border-2 rounded-xl focus:border-indigo-700  focus:outline-0"
                 />
             </div>
 
@@ -29,7 +29,7 @@ const Signup = () => {
                     placeholder="algra.mentor@gmail.com"
                     required
                     autoComplete="email"
-                    className="p-3 border-2 rounded-xl focus:border-red-500  focus:outline-0"
+                    className="p-3 border-2 rounded-xl focus:border-indigo-700  focus:outline-0"
                 />
             </div>
 
@@ -45,14 +45,14 @@ const Signup = () => {
                     placeholder="Enter your password"
                     required
                     autoComplete="current-password"
-                    className="p-3 border-2 rounded-xl focus:border-red-500  focus:outline-0"
+                    className="p-3 border-2 rounded-xl focus:border-indigo-700  focus:outline-0"
                 />
             </div>
 
-            <button type="submit" className="w-full p-2 rounded-xl text-white bg-red-700">Sign Up</button>
+            <button type="submit" className="w-full p-2 rounded-xl text-white bg-indigo-700">Sign Up</button>
 
 
-            <p className="underline hover:text-red-700">
+            <p className="underline hover:text-indigo-700">
                 Already have an account? <a href="/signup">Sign in here</a>
             </p>
             
