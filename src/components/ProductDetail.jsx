@@ -1,5 +1,6 @@
-import { useEffect, useState, useContext } from "react";
-import { BiSolidStar } from "react-icons/bi";
+import {  useContext } from "react";
+import { BiSolidStar, BiStar } from "react-icons/bi";
+
 import getProducts from "../utils/getProducts.js";
 import { useParams } from "react-router-dom";
 import ProductContext from "../utils/productContext.js";

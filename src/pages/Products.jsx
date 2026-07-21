@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import ProductListings from "./ProductListing.jsx";
-import ProductDetail from "./ProductDetail.jsx";
+import { useState } from "react";
+import ProductListings from "../components/ProductListing.jsx";
+import ProductDetail from "../components/ProductDetail.jsx";
 import { Routes, Route } from "react-router-dom";
 import ProductContext from "../utils/productContext.js";
 
@@ -8,7 +8,7 @@ import ProductContext from "../utils/productContext.js";
 
 
 
-const Products = () => {
+const Products = ({setCartProducts}) => {
 
 const  [chosenProduct, setChosenProduct] = useState({});
 

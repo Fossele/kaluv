@@ -1,16 +1,15 @@
 import { useNavigate } from "react-router-dom";
-
 import { BiSolidArrowToRight, BiStar } from "react-icons/bi";
-import { BiArrowToLeft } from "react-icons/bi";
 import { useContext } from "react";
 import ProductContext from "../utils/productContext";
 
-const { chosenProduct, getProductDetail } = useContext(ProductContext);
 
 
 const ProductCard = ({ name, image, price, discountPercentage = 0, rating, id, product }) => {
-
+    const { chosenProduct, getProductDetail } = useContext(ProductContext);
+   
     const navigate = useNavigate();
+   
     return (
         <div className=" border-indigo-700 bg-indigo-100 border transition duration-500 hover:shadow-[0_0_25px_rgba(0,0,0,0.08)] p-2.5">
             <img src={image} alt={name} />

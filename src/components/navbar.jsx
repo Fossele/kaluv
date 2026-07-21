@@ -8,7 +8,7 @@ const NavBar = () => {
             <p>KALUV</p> {/*Brand logo expected here */}
             <div className="flex w-1/3 justify-around items-center">
                 <span><BiSearch /></span>
-                <span className="flex items-center gap-1" activeClassName="border-b">Category<BiDownArrow /></span>
+                <span className="flex items-center gap-1">Category<BiDownArrow /></span>
                 <NavLink to="/sign-in" className="flex items-center gap-1 text-center">Sign in <BiLockOpenAlt /></NavLink>
                 <NavLink to = "/products/favorite" className="flex items-center-safe gap-1"><BiHeart />favorites</NavLink>
                 <NavLink  to ="/cart" className="flex items-center-safe gap-1"><BiCart />Cart</NavLink>

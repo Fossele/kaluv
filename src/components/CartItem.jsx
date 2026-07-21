@@ -22,7 +22,7 @@ const CartItem = ({product}) => {
             </div>
             <div>
                 <span></span>
-                <span>In Stock (12 Pcs)</span>
+                <span>In Stock (12 Pcs) {product.title}</span>
             </div>
             <div>$41.78</div>
             <div>
