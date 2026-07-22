@@ -25,7 +25,7 @@ const ProductCard = ({ name, image, price, discountPercentage = 0, rating, id, p
                 }
                 <p className="flex items-center"> <BiStar /> {rating} </p>
             </div>
-            <button className="flex items-center bg-indigo-700" onClick={()=> {navigate(`product/${id}`); getProductDetail(product);}}><p>Get detail</p> <BiSolidArrowToRight/> </button>
+            <button className="flex items-center bg-indigo-700" onClick={()=> { getProductDetail(product);navigate(`product/${id}`);}}><p>Get detail</p> <BiSolidArrowToRight/> </button>
         </div>
     );
 }

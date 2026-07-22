@@ -1,8 +1,6 @@
 import Login from "./pages/login.jsx";
 import Signup from "./pages/signup.jsx";
 import NavBar from "./components/navbar.jsx";
-import ProductDetail from "./components/ProductDetail.jsx";
-import ProductListing from "./components/ProductListing.jsx";
 import Products from "./pages/Products.jsx";
 import { useState } from "react";
 
