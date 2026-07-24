@@ -1,6 +1,5 @@
 import getProducts from "../utils/getProducts.js";
 import ProductCard from "./ProductCard.jsx";
-import ProductContext from "../utils/productContext.js";
 import { useEffect, useState } from "react";
 import { BiLoaderCircle } from "react-icons/bi";
 

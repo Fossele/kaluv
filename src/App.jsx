@@ -10,15 +10,6 @@ import Cart from "./pages/Cart.jsx";
 import { Toaster } from "react-hot-toast";
 
 
-const Test = () => {
-
-  return (
-    <div className="min-w-40 min-h-40 text-center text-amber-200
-  bg-purple-500 transition ease-linear delay-100 duration-[5s] hover:text-blue-700 hover:box-shadow-lg">
-      color change
-    </div>
-  )
-}
 export default function App() {
     
 const [cardProducts, setCartProducts] = useState([]);
@@ -38,10 +29,3 @@ const [cardProducts, setCartProducts] = useState([]);
   );
 }
 
-{/*  <Routes>
-      <Route path="/login" element={<Login />} ></Route>
-      <Route path="/home" element={<ProductListing />}></Route>
-      <Route path="product/detail:id" element={<ProductDetail />} ></Route>
-      <Route path="/signup" element={<Signup />}></Route>
-
-   </Routes> */}
